@@ -35,18 +35,65 @@ namespace ActiveDeskRoboSet
         {
             Laps = laps;
 
+            // InputSimulator
             var sim = new InputSimulator();
-            sim.Keyboard.TextEntry(name).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
-            sim.Keyboard.TextEntry(aHVNb).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
-            sim.Keyboard.TextEntry(period).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
+            sim.Keyboard.TextEntry(name).Sleep(Laps).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
+
+            // sim.Keyboard.TextEntry(aHVNb).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
+            SimKeyPressNumericString(sim, aHVNb, Laps);
+            sim.Keyboard.KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
+            
+            sim.Keyboard.TextEntry(period).Sleep(Laps).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
         }
 
+        public static void SimKeyPressNumericString(InputSimulator sim, string numS, int laps)
+        {
+            foreach (var chr in numS.ToCharArray())
+            {
+                switch (chr)
+                {
+                    default:
+                    case '0':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD0).Sleep(laps);
+                        break;
+                    case '1':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD1).Sleep(laps);
+                        break;
+                    case '2':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD2).Sleep(laps);
+                        break;
+                    case '3':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD3).Sleep(laps);
+                        break;
+                    case '4':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD4).Sleep(laps);
+                        break;
+                    case '5':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD5).Sleep(laps);
+                        break;
+                    case '6':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD6).Sleep(laps);
+                        break;
+                    case '7':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD7).Sleep(laps);
+                        break;
+                    case '8':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD8).Sleep(laps);
+                        break;
+                    case '9':
+                        sim.Keyboard.KeyPress(VirtualKeyCode.NUMPAD9).Sleep(laps);
+                        break;
+                }
+            }
+        }
+
+
         public static void ReportEntry(int laps, DateTime date,
-            string firmaAddressContact, string positionTitleLocation,
-            bool positionAssigned, bool fullTime, bool partTime,
-            bool postulationWritten, bool postulationPerso, bool postulationTelephon,
-            bool open, bool interviewed, bool hired, bool fired,
-            string hiringProcess_Notes)
+                string firmaAddressContact, string positionTitleLocation,
+                bool positionAssigned, bool fullTime, bool partTime,
+                bool postulationWritten, bool postulationPerso, bool postulationTelephon,
+                bool open, bool interviewed, bool hired, bool fired,
+                string hiringProcess_Notes)
         {
             Laps = laps;
 
@@ -73,7 +120,7 @@ namespace ActiveDeskRoboSet
         {
             if (!string.IsNullOrWhiteSpace(entry))
             {
-                sim.Keyboard.TextEntry(entry).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
+                sim.Keyboard.TextEntry(entry).Sleep(Laps).KeyPress(VirtualKeyCode.TAB).Sleep(Laps);
             }
             else
                 sim.Keyboard.KeyPress(VirtualKeyCode.TAB).Sleep(Laps);

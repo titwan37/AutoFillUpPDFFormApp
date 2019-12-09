@@ -25,7 +25,7 @@ namespace FillUpPDFFormApp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\titwa\\Downloads\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\GDrive\\Work\\RAV\\PO-RAVForm\\")]
         public string InitFolder {
             get {
                 return ((string)(this["InitFolder"]));
@@ -49,7 +49,7 @@ namespace FillUpPDFFormApp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        [global::System.Configuration.DefaultSettingValueAttribute("650")]
         public int Lapstime {
             get {
                 return ((int)(this["Lapstime"]));
