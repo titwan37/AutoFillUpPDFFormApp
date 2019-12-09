@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FillUpPDFFormApp" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="InitFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\titwa\Downloads\</Value>
+    </Setting>
+    <Setting Name="InitFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2019 RAV - Feuille de Suivi - 2019-Suivi.csv</Value>
+    </Setting>
+    <Setting Name="Lapstime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Falempin Antoine</Value>
+    </Setting>
+    <Setting Name="AVS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">7562229333213</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
